@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<Company>Gekka</Company>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+		<AssemblyVersion>0.1</AssemblyVersion>
+		<PackageId>Gekka.VisualStudio.Extension.EnvDTE</PackageId>
+		<Copyright>Gekka</Copyright>
+		<Version>0.1.0</Version>
+	</PropertyGroup>
+	<ItemGroup>
+	  <None Remove="X64\Env64.dll" />
+	  <None Remove="X86\Env32.dll" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Include="X64\Env64.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	  <Content Include="X86\Env32.dll">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.csproj" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Reference Include="System.ComponentModel.Composition" />
+	</ItemGroup>
+
+ 
+</Project>
