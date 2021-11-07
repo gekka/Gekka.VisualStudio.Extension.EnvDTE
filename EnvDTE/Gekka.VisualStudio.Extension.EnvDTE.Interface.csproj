@@ -7,8 +7,8 @@
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
 		<AssemblyVersion>0.1</AssemblyVersion>
-		<RootNamespace>Gekka.VisualStudio.Extension.EnvDTE</RootNamespace>
-		<AssemblyName>Gekka.VisualStudio.Extension.EnvDTE</AssemblyName>
+		<RootNamespace>Gekka.VisualStudio.Extension.EnvDTE.Interface</RootNamespace>
+		<AssemblyName>Gekka.VisualStudio.Extension.EnvDTE.Interface</AssemblyName>
 		<PackageLicenseExpression>BSD-4-Clause</PackageLicenseExpression>
 		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 		<Copyright>Gekka</Copyright>

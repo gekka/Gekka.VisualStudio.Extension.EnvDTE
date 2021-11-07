@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31612.314
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gekka.VisualStudio.Extension.EnvDTE", "EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.csproj", "{8978E0FD-07B1-489C-8E82-BCD7434C3F90}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gekka.VisualStudio.Extension.EnvDTE.Interface", "EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj", "{8978E0FD-07B1-489C-8E82-BCD7434C3F90}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestVSIX", "VSIX\TestVSIX.csproj", "{3C6C0B57-C1EA-4B98-B153-6C8206E223F7}"
 	ProjectSection(ProjectDependencies) = postProject

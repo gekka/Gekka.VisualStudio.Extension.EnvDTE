@@ -71,9 +71,9 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.csproj">
+    <ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj">
       <Project>{8978e0fd-07b1-489c-8e82-bcd7434c3f90}</Project>
-      <Name>Gekka.VisualStudio.Extension.EnvDTE</Name>
+      <Name>Gekka.VisualStudio.Extension.EnvDTE.Interface</Name>
     </ProjectReference>
     <ProjectReference Include="..\Loader\Gekka.VisualStudio.Extension.EnvDTE.Loader.csproj">
       <Project>{94f141a4-cfd6-4385-a083-fa58c5e1c763}</Project>

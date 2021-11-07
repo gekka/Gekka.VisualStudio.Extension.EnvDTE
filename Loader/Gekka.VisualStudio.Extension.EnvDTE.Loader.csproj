@@ -6,10 +6,16 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
-		<AssemblyVersion>0.1</AssemblyVersion>
+		<AssemblyVersion>0.1.1</AssemblyVersion>
 		<PackageId>Gekka.VisualStudio.Extension.EnvDTE</PackageId>
 		<Copyright>Gekka</Copyright>
-		<Version>0.1.0</Version>
+		<Version>0.1.2</Version>
+		<Authors>gekka</Authors>
+		<Product>Gekka.VisualStudio.Extension.EnvDTE</Product>
+		<PackageProjectUrl>https://github.com/gekka/Gekka.VisualStudio.Extension.EnvDTE</PackageProjectUrl>
+		<PackageLicenseExpression> BSD-4-Clause</PackageLicenseExpression>
+		<RepositoryUrl>https://github.com/gekka/Gekka.VisualStudio.Extension.EnvDTE</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="X64\Env64.dll" />
@@ -24,7 +30,9 @@
 	  </Content>
 	</ItemGroup>
 	<ItemGroup>
-	  <ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.csproj" />
+		<ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj" >
+			<PrivateAssets>all</PrivateAssets>
+		</ProjectReference>
 	</ItemGroup>
 	<ItemGroup>
 	  <Reference Include="System.ComponentModel.Composition" />
