@@ -41,6 +41,27 @@ namespace Gekka.VisualStudio.Extension.EnvDTE.Implements
             return dte != null;
         }
 
+        public void ExecuteCommand(string commandName, string commandArgs = "")
+        {
+            dte.ExecuteCommand(commandName, commandArgs);
+        }
+        public void ExecuteCommand(Command cmd, string commandArgs = "")
+        {
+            dte.ExecuteCommand(cmd.Name, commandArgs);
+        }
+
+        public IDocument ActiveDocument
+        {
+            get
+            {
+                if (dte?.ActiveDocument == null)
+                {
+                    return null;
+                }
+                return new Document(dte.ActiveDocument);
+            }
+        }
+
         ~DTE()
         {
         }

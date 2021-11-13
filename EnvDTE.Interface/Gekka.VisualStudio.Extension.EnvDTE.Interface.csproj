@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<TargetFramework>net472</TargetFramework>
+		<Company>Gekka</Company>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<SignAssembly>True</SignAssembly>
+		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
+		<AssemblyVersion>0.1.*</AssemblyVersion>
+		<RootNamespace>Gekka.VisualStudio.Extension.EnvDTE.Interface</RootNamespace>
+		<AssemblyName>Gekka.VisualStudio.Extension.EnvDTE.Interface</AssemblyName>
+		<PackageLicenseExpression>BSD-4-Clause</PackageLicenseExpression>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
+		<Copyright>Gekka</Copyright>
+		<Version>0.1.0</Version>
+		<Authors>gekka</Authors>
+		<PackageProjectUrl>https://github.com/gekka/Gekka.VisualStudio.Extension.EnvDTE</PackageProjectUrl>
+		<RepositoryUrl>https://github.com/gekka/Gekka.VisualStudio.Extension.EnvDTE</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <Deterministic>False</Deterministic>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <Deterministic>False</Deterministic>
+	</PropertyGroup>
+	<ItemGroup>
+	  <Reference Include="System.ComponentModel.Composition" />
+	</ItemGroup>
+</Project>

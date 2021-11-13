@@ -54,6 +54,9 @@
 
         string Edition { get; }
 
+        void ExecuteCommand(string commandName, string commandArgs = "");
         //IntPtr? HWnd { get; }
+
+        IDocument ActiveDocument { get; }
     }
 }

@@ -71,13 +71,13 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj">
+    <ProjectReference Include="..\EnvDTE.Interface\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj">
       <Project>{8978e0fd-07b1-489c-8e82-bcd7434c3f90}</Project>
       <Name>Gekka.VisualStudio.Extension.EnvDTE.Interface</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Loader\Gekka.VisualStudio.Extension.EnvDTE.Loader.csproj">
-      <Project>{94f141a4-cfd6-4385-a083-fa58c5e1c763}</Project>
-      <Name>Gekka.VisualStudio.Extension.EnvDTE.Loader</Name>
+    <ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.csproj">
+      <Project>{fadb90dd-2853-45cc-a827-86bb63e7e588}</Project>
+      <Name>Gekka.VisualStudio.Extension.EnvDTE</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

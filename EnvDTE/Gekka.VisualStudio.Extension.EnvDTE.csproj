@@ -6,31 +6,35 @@
 		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
 		<SignAssembly>True</SignAssembly>
 		<AssemblyOriginatorKeyFile>..\key.snk</AssemblyOriginatorKeyFile>
-		<AssemblyVersion>0.1.1</AssemblyVersion>
+		<AssemblyVersion>0.1.*</AssemblyVersion>
 		<PackageId>Gekka.VisualStudio.Extension.EnvDTE</PackageId>
 		<Copyright>Gekka</Copyright>
-		<Version>0.1.2</Version>
+		<Version>0.1.9</Version>
 		<Authors>gekka</Authors>
 		<Product>Gekka.VisualStudio.Extension.EnvDTE</Product>
 		<PackageProjectUrl>https://github.com/gekka/Gekka.VisualStudio.Extension.EnvDTE</PackageProjectUrl>
 		<PackageLicenseExpression> BSD-4-Clause</PackageLicenseExpression>
 		<RepositoryUrl>https://github.com/gekka/Gekka.VisualStudio.Extension.EnvDTE</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
+		<PackageRequireLicenseAcceptance>True</PackageRequireLicenseAcceptance>
 	</PropertyGroup>
 	<ItemGroup>
 	  <None Remove="X64\Env64.dll" />
 	  <None Remove="X86\Env32.dll" />
 	</ItemGroup>
+	
 	<ItemGroup>
 	  <Content Include="X64\Env64.dll">
+		<PackageCopyToOutput>true</PackageCopyToOutput>
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
 	  <Content Include="X86\Env32.dll">
+		<PackageCopyToOutput>true</PackageCopyToOutput>
 	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 	  </Content>
 	</ItemGroup>
 	<ItemGroup>
-		<ProjectReference Include="..\EnvDTE\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj" >
+		<ProjectReference Include="..\EnvDTE.Interface\Gekka.VisualStudio.Extension.EnvDTE.Interface.csproj">
 			<PrivateAssets>all</PrivateAssets>
 		</ProjectReference>
 	</ItemGroup>
@@ -38,5 +42,22 @@
 	  <Reference Include="System.ComponentModel.Composition" />
 	</ItemGroup>
 
+	<PropertyGroup>
+		<TargetsForTfmSpecificBuildOutput>$(TargetsForTfmSpecificBuildOutput);CopyProjectReferencesToPackage</TargetsForTfmSpecificBuildOutput>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+	  <Deterministic>False</Deterministic>
+	</PropertyGroup>
+
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+	  <Deterministic>False</Deterministic>
+	  <Optimize>False</Optimize>
+	</PropertyGroup>
+	<Target Name="CopyProjectReferencesToPackage" DependsOnTargets="ResolveReferences">
+		<ItemGroup>
+			<BuildOutputInPackage Include="@(ReferenceCopyLocalPaths-&gt;WithMetadataValue('ReferenceSourceTarget', 'ProjectReference'))" />
+		</ItemGroup>
+	</Target>
  
 </Project>

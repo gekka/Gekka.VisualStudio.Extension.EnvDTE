@@ -24,8 +24,8 @@ namespace Gekka.VisualStudio.Extension.EnvDTE.Implements
 
         ~CommandEvents()
         {
-            cev.BeforeExecute -= cev_BeforeExecute;
-            cev.AfterExecute -= cev_AfterExecute;
+            //cev.BeforeExecute -= cev_BeforeExecute;
+            //cev.AfterExecute -= cev_AfterExecute;
         }
 
         public IDTE Parent => _Parent;

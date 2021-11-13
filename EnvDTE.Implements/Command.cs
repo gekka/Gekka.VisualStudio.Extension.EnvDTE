@@ -22,6 +22,8 @@ namespace Gekka.VisualStudio.Extension.EnvDTE.Implements
             LocalizedName = cmd.LocalizedName;
         }
 
+        
+
         public string Name { get; }
 
         public string Guid { get; }

@@ -15,7 +15,6 @@ namespace Gekka.VisualStudio.Extension.EnvDTE.Implements
         internal Events(DTE parent)
         {
             this._Parent = parent;
-
             this.events = parent.dte.Events;
         }
 
@@ -26,7 +25,11 @@ namespace Gekka.VisualStudio.Extension.EnvDTE.Implements
 
         public ICommandEvents CommandEvents => _CommandEvents ?? (_CommandEvents = new CommandEvents(this));
         private CommandEvents _CommandEvents;
+
+        public IDTEEvents DTEEvents => _DTEEvents ?? (_DTEEvents = new DTEEvents(this));
+        private DTEEvents _DTEEvents;
     }
+
 
 #pragma warning restore VSTHRD010
 }

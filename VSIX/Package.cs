@@ -7,7 +7,7 @@
     using System.ComponentModel.Composition;
     using System.ComponentModel.Composition.Hosting;
     using System.Linq;
-    using Gekka.VisualStudio.Extension.EnvDTE.Loader;
+    using Gekka.VisualStudio.Extension.EnvDTE;
 
     [ProvideAutoLoad(EnvDTE80.ContextGuids.vsContextGuidNoSolution, PackageAutoLoadFlags.BackgroundLoad)]
     [ProvideAutoLoad(EnvDTE80.ContextGuids.vsContextGuidSolutionExists, PackageAutoLoadFlags.BackgroundLoad)]

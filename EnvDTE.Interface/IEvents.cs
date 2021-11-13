@@ -4,6 +4,7 @@
     {
         IDTE Parent { get; }
         ICommandEvents CommandEvents { get; }
+        IDTEEvents DTEEvents { get; }
     }
 
 }

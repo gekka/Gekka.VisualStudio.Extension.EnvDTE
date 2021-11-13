@@ -1,5 +1,5 @@
 ﻿
-namespace Gekka.VisualStudio.Extension.EnvDTE.Loader
+namespace Gekka.VisualStudio.Extension.EnvDTE
 {
     using System;
     using System.ComponentModel.Composition.Hosting;
